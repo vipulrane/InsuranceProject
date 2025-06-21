@@ -7,4 +7,6 @@ public class User {
 	Integer id;
 	String firstName;
 	String lastName;
+	String password;
+	String city;
 }
