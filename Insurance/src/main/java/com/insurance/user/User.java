@@ -6,4 +6,5 @@ import jakarta.persistence.Entity;
 public class User {
 	Integer id;
 	String firstName;
+	String lastName;
 }
