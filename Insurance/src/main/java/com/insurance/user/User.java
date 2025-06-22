@@ -9,4 +9,5 @@ public class User {
 	String lastName;
 	String password;
 	String city;
+	String nominee;
 }
