@@ -2,9 +2,6 @@ package com.insurance.serviceimpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-
 import com.insurance.entity.User;
 import com.insurance.repository.UserRepository;
 import com.insurance.service.UserService;
@@ -28,9 +25,9 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public User deleteUser(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public void deleteUser(Integer id) {
+		userRepository.deleteById(id);
+
 	}
 
 }
