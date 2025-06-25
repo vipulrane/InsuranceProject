@@ -23,6 +23,9 @@ public class User {
 	String password;
 	@Column(name = "city")
 	String city;
+	
+	 public User() {
+	    }
 
 	public User(Integer id, String firstName, String lastName, String password, String city) {
 		this.id = id;

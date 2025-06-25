@@ -2,6 +2,8 @@ package com.insurance.serviceimpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.insurance.entity.User;
 import com.insurance.repository.UserRepository;
@@ -21,8 +23,8 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User getuser(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		User getuserDetails=userRepository.findById(id).get();
+		return getuserDetails;
 	}
 
 	@Override
