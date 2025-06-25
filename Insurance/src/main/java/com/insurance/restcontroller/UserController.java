@@ -1,6 +1,7 @@
 package com.insurance.restcontroller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,8 +24,14 @@ public class UserController {
 	}
 	
 	@GetMapping("/getUser/{id}")
-	public User getUser(@PathVariable("id") Integer id) {
+	public User getUser(@PathVariable Integer id) {
 		User userData=userService.getuser(id);
 		return userData;
+	}
+	
+	@DeleteMapping("/deleteUser/{id}")
+	public String deleteUser(@PathVariable Integer id) {
+		userService.deleteUser(id);
+		return "Data Deleted Successfully";
 	}
 }
